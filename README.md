@@ -2,4 +2,4 @@
  HTML &amp; CSS practice
 
 
-<img href="https://imgur.com/a/BDAyOrO">
+<img src="https://imgur.com/a/BDAyOrO" alt="template">
