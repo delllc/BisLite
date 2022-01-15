@@ -1,6 +1,6 @@
 # BisLite
-<bold>In project i'm using HTML & CSS & JS
-In future, i will been using preprocessors, gulp</bold>
+<p>In project i'm using HTML & CSS & JS</p>
+<p>In future, i will been using preprocessors, gulp</p>
 
 
 
