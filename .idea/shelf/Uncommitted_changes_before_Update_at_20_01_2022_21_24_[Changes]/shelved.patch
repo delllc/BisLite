@@ -1,0 +1,253 @@
+Index: css/main.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>body {\n    padding: 0;\n    margin: 0;\n    font-family: 'Lato', sans-serif;\n\n}\n\nul {\n    padding: 0;\n    margin: 0;\n\n}\n\nli {\n    display: inline-block;\n}\n\na {\n    color: #000;\n    display: inline-block;\n    text-decoration: none;\n}\n\n.container {\n    max-width: 1030px;\n    margin: 0 auto;\n    padding: 0 15px;\n}\n\n.header {\n    background-color: #e8ebf1;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.07);\n}\n\n.header__inner {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    height: 120px;\n}\n\n.header__logo a {\n    color: #2aacc8;\n    font-size: 50px;\n    font-family: 'Lato', sans-serif;\n    font-weight: 400;\n}\n\n.header__logo a span {\n    color: #000;\n    font-weight: 700;\n}\n\n.header__menu {\n    margin-right: 20px;\n}\n\n.header__menu li + li {\n    margin-left: 50px;\n}\n\n.header__menu a {\n    font-family: 'arial', sans-serif;\n    font-size: 13px;\n    line-height: 20px;\n    text-transform: uppercase;\n    font-weight: 700;\n    padding-top: 9px;\n    padding-bottom: 13px;\n}\n\n.header__drop-down.drop-down {\n    margin-left: 39px;\n}\n\n.header__drop-down.drop-down + header__drop-down.drop-down {\n    margin-left: 12px;\n}\n\n.header__drop-down.drop-down + header__link-blog {\n    margin-left: 20px;\n}\n\n.header__drop-down .drop-down__list li {\n    margin-left: 0;\n}\n\n.drop-down__list {\n    display: none;\n    position: absolute;\n    width: 200px;\n    background-color: #fff;\n    border: 1px solid rgb(232, 235, 241);\n    border-bottom: 5px solid #2aacc8;\n    border-top: none;\n    box-shadow: 0px 5px 0px 0px rgba(42, 172, 200, 0.004);\n    padding: 10px 5px;\n}\n\n.drop-down__list a {\n    padding: 12px 0 12px 10px;\n    font-weight: 400;\n    display: block;\n    text-transform: none;\n}\n\n.drop-down__list a:hover {\n    color: #2aacc8;\n}\n\n.drop-down__list li + li a {\n    border-top: 1px solid #e7e7e7;\n}\n\n.header__drop-down {\n    position: relative;\n}\n\n.header__drop-down > a {\n    position: relative;\n    padding-left: 11px;\n    padding-right: 26px;\n    border-top: 5px solid transparent;\n}\n\n.header__drop-down > a::after {\n    content: \"\";\n    position: absolute;\n    background-image: url(../img/down-arrow.png);\n    width: 7px;\n    height: 5px;\n    top: 15px;\n    right: 8px;\n\n}\n\n.header__drop-down.drop-down:hover .drop-down__list {\n    display: block;\n}\n\n.header__drop-down.drop-down:hover > a {\n    color: #2aacc8;\n    border-top: 5px solid #2aacc8;\n    background-color: #fff;\n    transition: all .3s;\n}\n\n.slider {\n    background-color: #81e4ed;\n    padding: 20px 0 10px;\n}\n\n.slider__item {\n    background-image: url(\"../img/slider-bg.png\");\n    min-height: 440px;\n    background-position: top center;\n    background-size: cover;\n    background-repeat: no-repeat;\n}\n\n.slider__item-title {\n    font-size: 50px;\n    font-weight: 700;\n    color: #fff;\n    width: 300px;\n    margin-left: 60px;\n    padding-top: 90px;\n}\n\n\n\n.slick-dots li button {\n    width: 14px;\n    height: 14px;\n    background-color: rgba(98, 98, 98, 0.5);\n    border-radius: 50%;\n}\n\n.slick-dots li.slick-active button {\n    background-color: #fff;\n}\n\n.slick-dots li button:before {\n    display: none;\n}\n\n.slick-dots li {\n    margin: 0 9px;\n    width: auto;\n    height: auto;\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/css/main.css b/css/main.css
+--- a/css/main.css	(revision 8e8a7413cad1d6c764b4a82aff553b827bdb500d)
++++ b/css/main.css	(date 1642695519778)
+@@ -95,6 +95,7 @@
+     border-top: none;
+     box-shadow: 0px 5px 0px 0px rgba(42, 172, 200, 0.004);
+     padding: 10px 5px;
++    z-index: 5;
+ }
+ 
+ .drop-down__list a {
+@@ -188,4 +189,28 @@
+     margin: 0 9px;
+     width: auto;
+     height: auto;
+-}
+\ No newline at end of file
++}
++
++.items {
++    background-color: #e8ebf1;
++    padding: 60px 0 50px;
++}
++
++.items__inner {
++    display: flex;
++    justify-content: space-between;
++}
++
++.item {
++    font-family: 'arial', sans-serif;
++    width: 225px;
++}
++
++.item__title {
++    text-transform: uppercase;
++    font-size: 15px;
++    font-weight: 700;
++    line-height: 20px;
++    padding: 10px 0 0 60px;
++    margin-bottom: 30px;
++}
+Index: index.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!doctype html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\"\n          content=\"width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">\n    <title>BisLite</title>\n    <link rel=\"stylesheet\" href=\"css/slick-theme.css\">\n    <link rel=\"stylesheet\" href=\"css/slick.css\">\n    <link rel=\"stylesheet\" href=\"css/main.css\">\n\n\n    <!-- Fonts -->\n\n    <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n    <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>\n    <link href=\"https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Montserrat:wght@400;500&display=swap\" rel=\"stylesheet\">\n</head>\n<body>\n<header class=\"header\">\n    <div class=\"container\">\n        <div class=\"header__inner\">\n            <div class=\"header__logo\">\n                <a href=\"#\">\n                    <span>Bis</span>Lite\n                </a>\n            </div>\n            <nav class=\"header__menu\">\n                <ul>\n                    <li><a href=\"#\">Home</a></li>\n                    <li><a href=\"#\">About us</a></li>\n                    <li class=\"header__drop-down drop-down\">\n                        <a href=\"#\">\n                            Services\n                        </a>\n                        <ul class=\"drop-down__list\">\n                            <li><a href=\"#\">Web Design</a></li>\n                            <li><a href=\"#\">Wordpress Design</a></li>\n                            <li><a href=\"#\">Mobile App Devplopment</a></li>\n                            <li><a href=\"#\">Internet Marketing</a></li>\n                            <li><a href=\"#\">Social media Management</a></li>\n                        </ul>\n                    </li>\n                    <li class=\"header__drop-down drop-down\">\n                        <a href=\"#\">\n                            Portfolio\n                        </a>\n                        <ul class=\"drop-down__list\">\n                            <li><a href=\"#\">Lorem ipsumipsumipsum</a></li>\n                            <li><a href=\"#\">Lorem ipsumipsumipsum</a></li>\n                            <li><a href=\"#\">Lorem ipsumipsumipsum</a></li>\n                            <li><a href=\"#\">Lorem ipsumipsumipsum</a></li>\n                            <li><a href=\"#\">Lorem ipsumipsumipsum</a></li>\n                        </ul>\n                    </li>\n                    <li class=\"header__link-blog\"><a href=\"#\">Blog</a></li>\n                    <li><a href=\"#\">Contact us</a></li>\n                </ul>\n            </nav>\n        </div>\n    </div>\n</header>\n<section class=\"slider\">\n    <div class=\"container\">\n        <div class=\"slider__inner\">\n\n            <div class=\"slider__item\">\n                <div class=\"slider__item-title\">\n                    We design clean, crisp & memorable icons\n                </div>\n            </div>\n            <div class=\"slider__item\">\n                <div class=\"slider__item-title\">\n                    We design clean, crisp & memorable icons\n                </div>\n            </div>\n            <div class=\"slider__item\">\n                <div class=\"slider__item-title\">\n                    We design clean, crisp & memorable icons\n                </div>\n            </div>\n            <div class=\"slider__item\">\n                <div class=\"slider__item-title\">\n                    We design clean, crisp & memorable icons\n                </div>\n            </div>\n            <div class=\"slider__item\">\n                <div class=\"slider__item-title\">\n                    We design clean, crisp & memorable icons\n                </div>\n            </div>\n\n        </div>\n    </div>\n</section>\n<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js\"></script>\n<script src=\"js/slick.min.js\"></script>\n<script src=\"js/main.js\"></script>\n</body>\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/index.html b/index.html
+--- a/index.html	(revision 8e8a7413cad1d6c764b4a82aff553b827bdb500d)
++++ b/index.html	(date 1642695514729)
+@@ -51,7 +51,7 @@
+                             <li><a href="#">Lorem ipsumipsumipsum</a></li>
+                             <li><a href="#">Lorem ipsumipsumipsum</a></li>
+                             <li><a href="#">Lorem ipsumipsumipsum</a></li>
+-                            <li><a href="#">Lorem ipsumipsumipsum</a></li>
++                            <li><a href="#">Lorem impsumimpsumipsum</a></li>
+                         </ul>
+                     </li>
+                     <li class="header__link-blog"><a href="#">Blog</a></li>
+@@ -64,7 +64,6 @@
+ <section class="slider">
+     <div class="container">
+         <div class="slider__inner">
+-
+             <div class="slider__item">
+                 <div class="slider__item-title">
+                     We design clean, crisp & memorable icons
+@@ -90,10 +89,55 @@
+                     We design clean, crisp & memorable icons
+                 </div>
+             </div>
+-
++        </div>
++    </div>
++</section>
++<section class="items">
++    <div class="container">
++        <div class="items__inner">
++             <div class=item">
++                 <div class="item__title">
++                    Clean Theme
++                 </div>
++                 <div class="item__text">
++                     Ut nec lorem id orci convallis porta. Donec pharetra neque eu velit dictum molestie. Duis porta gravida augue sed viverra. Quisque at nulla leo, non aliquet mi.
++                 </div>
++                 <a href="#" class="item__link">Read more</a>
++             </div>
++            <div class=item">
++                <div class="item__title">
++                    Responsive Design
++                </div>
++                <div class="item__text">
++                    Ut nec lorem id orci convallis porta. Donec pharetra neque eu velit dictum molestie. Duis porta gravida augue sed viverra. Quisque at nulla leo, non aliquet mi.
++                </div>
++                <a href="#" class="item__link">Read more</a>
++            </div>
++            <div class=item">
++                <div class="item__title">
++                    Fully layered PSD
++                </div>
++                <div class="item__text">
++                    Ut nec lorem id orci convallis porta. Donec pharetra neque eu velit dictum molestie. Duis porta gravida augue sed viverra. Quisque at nulla leo, non aliquet mi.
++                </div>
++                <a href="#" class="item__link">Read more</a>
++            </div>
++            <div class=item">
++                <div class="item__title">
++                    Ready for coding
++                </div>
++                <div class="item__text">
++                    Ut nec lorem id orci convallis porta. Donec pharetra neque eu velit dictum molestie. Duis porta gravida augue sed viverra. Quisque at nulla leo, non aliquet mi.
++                </div>
++                <a href="#" class="item__link">Read more</a>
++            </div>
+         </div>
+     </div>
+ </section>
++
++
++
++
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+ <script src="js/slick.min.js"></script>
+ <script src="js/main.js"></script>
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"b0652020-a963-4e9f-8db9-98514485f2df\" name=\"Changes\" comment=\"Added slider\">\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/css/main.css\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/css/main.css\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/js/main.js\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/js/main.js\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"ChangesViewManager\" show_ignored=\"true\" />\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"JavaScript File\" />\n        <option value=\"CSS File\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"PUSH_TAGS\">\n      <GitPushTagMode>\n        <option name=\"argument\" value=\"--tags\" />\n        <option name=\"title\" value=\"All\" />\n      </GitPushTagMode>\n    </option>\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\n      <map>\n        <entry key=\"$PROJECT_DIR$\" value=\"master\" />\n      </map>\n    </option>\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n    <option name=\"RESET_MODE\" value=\"MIXED\" />\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"ProjectId\" id=\"23eNWdH3jDqs0wFUiZ5aBEeGeKf\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$/../gitBislite\" />\n    <property name=\"list.type.of.created.stylesheet\" value=\"CSS\" />\n    <property name=\"settings.editor.selected.configurable\" value=\"project.propVCSSupport.Mappings\" />\n    <property name=\"vue.rearranger.settings.migration\" value=\"true\" />\n  </component>\n  <component name=\"RecentsManager\">\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"C:\\Users\\Александр\\Desktop\\bislite\\js\" />\n      <recent name=\"C:\\Users\\Александр\\Desktop\\bislite\\css\" />\n    </key>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"b0652020-a963-4e9f-8db9-98514485f2df\" name=\"Changes\" comment=\"Added slider\" />\n      <created>1642090629427</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1642090629427</updated>\n      <workItem from=\"1642090631260\" duration=\"561000\" />\n      <workItem from=\"1642091214629\" duration=\"1467000\" />\n      <workItem from=\"1642139105593\" duration=\"25596000\" />\n      <workItem from=\"1642241769267\" duration=\"11385000\" />\n      <workItem from=\"1642272004055\" duration=\"278000\" />\n      <workItem from=\"1642272373415\" duration=\"419000\" />\n      <workItem from=\"1642272852921\" duration=\"97000\" />\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"Added slider\">\n      <created>1642271482037</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1642271482037</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"Added slider\">\n      <created>1642272183319</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1642272183319</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"Added slider\">\n      <created>1642272727470</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1642272727470</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"4\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State>\n              <option name=\"FILTERS\">\n                <map>\n                  <entry key=\"branch\">\n                    <value>\n                      <list>\n                        <option value=\"master\" />\n                      </list>\n                    </value>\n                  </entry>\n                </map>\n              </option>\n            </State>\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <ignored-roots>\n      <path value=\"$PROJECT_DIR$\" />\n    </ignored-roots>\n    <MESSAGE value=\"Added slider\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Added slider\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 8e8a7413cad1d6c764b4a82aff553b827bdb500d)
++++ b/.idea/workspace.xml	(date 1642695819826)
+@@ -2,10 +2,12 @@
+ <project version="4">
+   <component name="ChangeListManager">
+     <list default="true" id="b0652020-a963-4e9f-8db9-98514485f2df" name="Changes" comment="Added slider">
++      <change afterPath="$PROJECT_DIR$/img/telegram.svg" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+     </list>
++    <list id="5c42d1cc-6537-4d9e-8396-13124accc262" name="Changes by Arthur" comment="" />
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -34,6 +36,14 @@
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+     <option name="RESET_MODE" value="MIXED" />
++  </component>
++  <component name="GitSEFilterConfiguration">
++    <file-type-list>
++      <filtered-out-file-type name="LOCAL_BRANCH" />
++      <filtered-out-file-type name="REMOTE_BRANCH" />
++      <filtered-out-file-type name="TAG" />
++      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
++    </file-type-list>
+   </component>
+   <component name="MarkdownSettingsMigration">
+     <option name="stateVersion" value="1" />
+@@ -48,12 +58,15 @@
+     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+     <property name="WebServerToolWindowFactoryState" value="false" />
+-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../gitBislite" />
++    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../Games/tools/emulator.exe" />
+     <property name="list.type.of.created.stylesheet" value="CSS" />
+-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
++    <property name="settings.editor.selected.configurable" value="preferences.externalTools" />
+     <property name="vue.rearranger.settings.migration" value="true" />
+   </component>
+   <component name="RecentsManager">
++    <key name="CopyFile.RECENT_KEYS">
++      <recent name="C:\Users\Александр\Desktop\bislite" />
++    </key>
+     <key name="MoveFile.RECENT_KEYS">
+       <recent name="C:\Users\Александр\Desktop\bislite\js" />
+       <recent name="C:\Users\Александр\Desktop\bislite\css" />
+@@ -73,7 +86,11 @@
+       <workItem from="1642241769267" duration="11385000" />
+       <workItem from="1642272004055" duration="278000" />
+       <workItem from="1642272373415" duration="419000" />
+-      <workItem from="1642272852921" duration="97000" />
++      <workItem from="1642272852921" duration="705000" />
++      <workItem from="1642317560723" duration="2964000" />
++      <workItem from="1642325256975" duration="3833000" />
++      <workItem from="1642342671914" duration="763000" />
++      <workItem from="1642692485548" duration="3171000" />
+     </task>
+     <task id="LOCAL-00001" summary="Added slider">
+       <created>1642271482037</created>
+@@ -96,7 +113,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1642272727470</updated>
+     </task>
+-    <option name="localTasksCounter" value="4" />
++    <task id="LOCAL-00004" summary="Added slider">
++      <created>1642272966870</created>
++      <option name="number" value="00004" />
++      <option name="presentableId" value="LOCAL-00004" />
++      <option name="project" value="LOCAL" />
++      <updated>1642272966870</updated>
++    </task>
++    <option name="localTasksCounter" value="5" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -132,4 +156,14 @@
+     <MESSAGE value="Added slider" />
+     <option name="LAST_COMMIT_MESSAGE" value="Added slider" />
+   </component>
++  <component name="XDebuggerManager">
++    <breakpoint-manager>
++      <breakpoints>
++        <line-breakpoint enabled="true" type="javascript">
++          <url>file://$PROJECT_DIR$/js/main.js</url>
++          <option name="timeStamp" value="1" />
++        </line-breakpoint>
++      </breakpoints>
++    </breakpoint-manager>
++  </component>
+ </project>
+\ No newline at end of file
+Index: img/telegram.svg
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/img/telegram.svg b/img/telegram.svg
+new file mode 100644
+--- /dev/null	(date 1642695819715)
++++ b/img/telegram.svg	(date 1642695819715)
+@@ -0,0 +1,7 @@
++<svg
++        xmlns="http://www.w3.org/2000/svg"
++        xmlns:xlink="http://www.w3.org/1999/xlink"
++        width="21px" height="17px">
++    <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
++          d="M16.624,16.990 L16.624,15.673 L19.506,15.673 L19.506,12.954 L20.992,12.954 L20.992,16.990 L16.624,16.990 ZM19.506,1.312 L16.624,1.312 L16.624,0.3 L20.992,0.3 L20.992,4.31 L19.506,4.31 L19.506,1.312 ZM1.492,4.31 L0.6,4.31 L0.6,0.3 L4.374,0.3 L4.374,1.312 L1.492,1.312 L1.492,4.31 ZM2.888,2.714 L18.110,2.714 L18.110,14.271 L2.888,14.271 L2.888,2.714 ZM4.374,12.954 L16.624,12.954 L16.624,4.31 L4.374,4.31 L4.374,12.954 ZM5.815,5.433 L15.228,5.433 L15.228,11.552 L5.815,11.552 L5.815,5.433 ZM1.492,15.673 L4.374,15.673 L4.374,16.990 L0.6,16.990 L0.6,12.954 L1.492,12.954 L1.492,15.673 Z"/>
++</svg>
+\ No newline at end of file
