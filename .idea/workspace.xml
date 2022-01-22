@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b0652020-a963-4e9f-8db9-98514485f2df" name="Changes" comment="Added slider">
-      <change afterPath="$PROJECT_DIR$/icons/arrow-right.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/icons/cursor.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/icons/eye.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/icons/link.svg" afterDir="false" />
+    <list default="true" id="b0652020-a963-4e9f-8db9-98514485f2df" name="Changes" comment="New section">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
     </list>
     <list id="5c42d1cc-6537-4d9e-8396-13124accc262" name="Changes by Arthur" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -94,7 +91,12 @@
       <workItem from="1642317560723" duration="2964000" />
       <workItem from="1642325256975" duration="3833000" />
       <workItem from="1642342671914" duration="763000" />
-      <workItem from="1642692485548" duration="9123000" />
+      <workItem from="1642692485548" duration="9607000" />
+      <workItem from="1642737962007" duration="2998000" />
+      <workItem from="1642780912140" duration="496000" />
+      <workItem from="1642788451690" duration="601000" />
+      <workItem from="1642871315909" duration="7000" />
+      <workItem from="1642871991378" duration="110000" />
     </task>
     <task id="LOCAL-00001" summary="Added slider">
       <created>1642271482037</created>
@@ -124,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642272966870</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="New section">
+      <created>1642702987760</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1642702987760</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,7 +167,8 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <MESSAGE value="Added slider" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added slider" />
+    <MESSAGE value="New section" />
+    <option name="LAST_COMMIT_MESSAGE" value="New section" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

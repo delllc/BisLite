@@ -3,6 +3,7 @@ body {
     margin: 0;
     font-family: 'Lato', sans-serif;
     line-height: 20px;
+    font-size: 15px;
 
 }
 
@@ -211,7 +212,6 @@ a {
 
 .item__title {
     text-transform: uppercase;
-    font-size: 15px;
     font-weight: 700;
     padding: 10px 0 0 60px;
     margin-bottom: 30px;
@@ -257,22 +257,91 @@ a {
 
 .works__title {
     text-transform: uppercase;
-    font-size: 15px;
     font-weight: 700;
-    padding: 10px 19px 15px 60px;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    padding: 25px 0 15px 40px;
     position: relative;
     border-bottom: 1px solid #dfe1e5;
+    font-family: 'arial', sans-serif;
 }
 
-.works__icon {
+.works__title::before {
+    content: " ";
     position: absolute;
-    width: 40px;
-    height: 40px;
-    top: 0;
     left: 0;
+    top: 20;
+    background-image: url(../icons/cursor.svg);
+    width: 14px;
+    height: 24px;
+}
+
+
+
+.works__inner {
+    display: flex;
+    padding: 20px 0 40px;
+    border-top: 1px solid #dfe1e5;
+    border-bottom: 1px solid #dfe1e5;
+}
+.works__inner-item {
+    text-align: center;
+}
+
+.slick-arrow {
+    height: 20px;
+    width: 20px;
+    background-color: #2aacc8;
+    border-radius: 50%;
+    
+}
+
+.slick-arrow::before {
+    display: none;
+}
+
+.slick-arrow:hover, .slick-arrow:focus {
+    background-color: #2aacc8;
+}
+
+.slick-next {
+    top: -27px;
+    right: 0;
+}
+
+.slick-prev {   
+    top: -37px;
+    right: 31px;  
+    left: auto;
+    transform: scale(-1, 1);
+}
+
+.works__inner-box {
+    display: inline-block;
+    position: relative;
+    
+}
+
+.works__inner-link {
+    background-color: #2aacc8;
+    height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+    height: 0;
+    transition: all .5s;
+}
+.works__inner-link a {
+    margin: 0 15px;
+}
+.works__inner-box:hover .works__inner-link {
+    height: 50%;
+    
+}
+
+.slick-list {
+    margin-left: -25px;
+    margin-right: -25px;    
 }
